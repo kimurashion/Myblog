@@ -4,13 +4,13 @@
     <title>Myblog</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
     <header>
-        
+
             <% if user_signed_in? %>
                 <%= current_user.username %>
                 <%= link_to 'プロフィール変更', edit_user_registration_path %>
@@ -21,7 +21,7 @@
                 <%= link_to 'サインアップ', new_user_registration_path %>
                 <%= link_to 'ログイン', new_user_session_path %>
             <% end %>
-        
+
     </header>
 
     <div class="container">
@@ -29,11 +29,11 @@
         <% if user_signed_in? %>
           <%= link_to 'logout', destroy_user_session_path, method: :delete %>
        <% end %>
-        
+
         <h1><%= link_to image_tag('logo.jpg', class: 'logo rounded'), root_path %></h1>
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
-    
+
     <%= yield %>
     </div>
   </body>
