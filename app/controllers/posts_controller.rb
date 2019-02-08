@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.where(user_id: current_user.id).order(created_at: 'desc')
+    @otherposts = Post.where.not(user_id: current_user.id).order(created_at: 'desc')
   end
 
   def new

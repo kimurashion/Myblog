@@ -32,7 +32,7 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   
-  config.action_mailer.default_url_options = { host: 'df0d9c6484274edf9e72c52ced1bebf7.vfs.cloud9.us-east-2.amazonaws.com' }
+  config.action_mailer.default_url_options = { host: 'http://localhost:3000' }
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
