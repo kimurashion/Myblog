@@ -1,38 +1,50 @@
 
 <div class="main-container">
-  <div class="left_header">
-    <h2>
-      <%= link_to 'Add New', new_post_path, class: 'header-menu' %>
-      <div class="pagetitle">
-      My Posts
-      </div>
-    </h2>
+  <div class="left">
+
+    <div class="left_header">
+      <h2>
+        <%= link_to '新規投稿', new_post_path, class: 'header-menu' %>
+        <div class="pagetitle">
+        自分の投稿
+        </div>
+      </h2>
+    </div>
+
+    <div class="left_column">
+      <ul class="list-unstyled">
+        <% @posts.each do |post| %>
+          <li>
+            <%= link_to post.title, post_path(post) %>
+            <%= link_to '[Edit]', edit_post_path(post), class: 'command' %>
+            <%= link_to '[x]',
+              post_path(post),
+              method: :delete,
+              class: 'command',
+              data: { confirm: 'Sure?' } %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 
-  <div class="left_column">
-    <ul class="list-unstyled">
-      <% @posts.each do |post| %>
-        <li>
-          <%= link_to post.title, post_path(post) %>
-          <%= link_to '[Edit]', edit_post_path(post), class: 'command' %>
-          <%= link_to '[x]',
-            post_path(post),
-            method: :delete,
-            class: 'command',
-            data: { confirm: 'Sure?' } %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+  <div class="right">
+    <div class="right_header">
+      <h2>
+        <div class="pagetitle">
+        他の人の投稿
+        </div>
+      </h2>
+    </div>
 
-  <div class="right_column">
-    <ul class="list-unstyled">
-      <% @otherposts.each do |post| %>
-        <li>
-          <%= link_to post.title, post_path(post) %>
-        </li>
-      <% end %>
-    </ul>
+    <div class="right_column">
+      <ul class="list-unstyled">
+        <% @otherposts.each do |post| %>
+          <li>
+            <%= link_to post.title, post_path(post) %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
-
 </div>
