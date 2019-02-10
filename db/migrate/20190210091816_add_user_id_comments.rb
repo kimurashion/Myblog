@@ -1,5 +1,5 @@
 class AddUserIdComments < ActiveRecord::Migration[5.2]
   def change
-  	add_column :users, :username, :string
+  	add_reference :comments, :user, index: true
   end
 end
