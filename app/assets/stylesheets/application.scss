@@ -15,8 +15,8 @@
  */
 
 .container {
- width: 400px;
- margin: 20px auto;
+ width: 150px;
+// margin: 20px auto;
  background-color: silver;
 // background-image: url(/assets/IMG_1236.jpg);
  background-repeat: no-repeat;
@@ -32,37 +32,39 @@ body {
 h2 {
  font-size: 16px;
  padding-bottom: 10px;
- margin-bottom: 15px;
+// margin-bottom: 15px;
 // border-bottom: 1px solid #ddd;
- text-align: center;
-  color: green;
+// text-align: center;
+// color: green;
 }
 
 .pagetitle {
  font-size: 16px;
  padding-bottom: 10px;
- margin-bottom: 15px;
+// margin-bottom: 15px;
 // border-bottom: 1px solid #ddd;
- text-align: center;
- color: #D7EEFF;
+//text-align: center;
+// color: #D7EEFF;
 }
-    
+
 
 ul > li {
- text-align: center;
+ //text-align: center;
  font-family: monospace;
  font-size: 16px;
  padding-bottom: 10px;
- margin-bottom: 15px;
+ width: 200px;
+//margin-bottom: 15px;
 }
 
 .list-unstyled {
- color: #D7EEFF;
- text-align: center;
+// color: #D7EEFF;
+//text-align: center;
  font-family: monospace;
  font-size: 16px;
  padding-bottom: 10px;
- margin-bottom: 15px;
+ width: 200px;
+// margin-bottom: 15px;
 }
 
 .logo {
@@ -73,14 +75,14 @@ ul > li {
 .header-menu {
   font-size: 12px;
   font-weight: normal;
-  float: right;
-  color: white;
+  // float: right;
+  // color: white;
 }
 
 input[type="text"], textarea {
   box-sizing: border-box;
   width: 400px;
-  padding: 5px;
+//  padding: 5px;
 }
 
 textarea {
@@ -98,10 +100,8 @@ textarea {
   font-size: 16px;
   padding-bottom: 10px;
   margin-bottom: 15px;
-  color: #D7EEFF;
+//  color: #D7EEFF;
 }
-
-
 
 h3 {
   font-size: 14px;
@@ -110,5 +110,42 @@ h3 {
   color: red;
 }
 
+.left{
+  width: 300px;
+  height: 300px;
+  float:left;
+}
+
+.right {
+  overflow: hidden;
+  width: auto;
+//  clear:left;
+//  height: 300px;
+}
+
+.left_header{
+//  width: 200px;
+}
+
+.left_column{
+//  width: 200px;
+}
+
+.addnew_btn{
+
+}
+
+.mypagetitle{
+  float:left;
+}
+
+.otherpagetitle{
+
+}
+
+.global_header{
+  text-align: right;
+}
+
 // Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "bootstrap"; 
+@import "bootstrap";

@@ -10,18 +10,20 @@
 
   <body>
     <header>
-
+          <div class="global_header">
             <% if user_signed_in? %>
                 <%= current_user.username %>
                 <%= link_to 'プロフィール変更', edit_user_registration_path %>
+                 |
                 <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+                 |
                 <%= link_to 'ユーザーネームの設定', mypage_edit_path %>
 
             <% else %>
                 <%= link_to 'サインアップ', new_user_registration_path %>
                 <%= link_to 'ログイン', new_user_session_path %>
             <% end %>
-
+          </div>
     </header>
 
     <div class="container">
