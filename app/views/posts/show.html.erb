@@ -25,10 +25,11 @@
         method: :delete,
         class: 'command',
         data: { confirm: 'Sure?' } %>
+        <% comment.user_id %>
     </li>
   <% end %>
   </ul>
-  <% comment.user_id %>
+
 <% end %>
 <%= form_for([@post, @post.comments.build]) do |f| %>
 <p>
