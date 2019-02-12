@@ -20,7 +20,6 @@
     <li>
       <%= comment.body %>
       <%= current_user.username %>
-      <%= comment.user %>
       <%= link_to '[x]',
         post_comment_path(@post, comment),
         method: :delete,
@@ -29,6 +28,7 @@
     </li>
   <% end %>
   </ul>
+  <% comment.user_id %>
 <% end %>
 <%= form_for([@post, @post.comments.build]) do |f| %>
 <p>
