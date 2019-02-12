@@ -19,7 +19,6 @@
   <% @post.comments.each do |comment| %>
     <li>
       <%= comment.body %>
-      <%= current_user.username %>
       <%= link_to '[x]',
         post_comment_path(@post, comment),
         method: :delete,
