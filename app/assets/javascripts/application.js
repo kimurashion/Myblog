@@ -19,6 +19,7 @@
 //= require bootstrap-sprockets
 //= require jquery.validate
 //= require jquery.validate.additional-methods
+//= require bootstrap-sprockets
 
 
 $(function(){
