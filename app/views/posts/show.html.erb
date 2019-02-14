@@ -24,7 +24,7 @@
         method: :delete,
         class: 'command',
         data: { confirm: 'Sure?' } %>
-        <%= comment.user_id %>
+        <%= comment.user.username %>
     </li>
   <% end %>
   </ul>
