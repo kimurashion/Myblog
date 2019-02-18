@@ -17,11 +17,11 @@
         <% @posts.each do |post| %>
           <li>
             <%= link_to post.title, post_path(post) %>
-            <%= link_to '[Edit]', edit_post_path(post), class: 'command' %>
-            <%= link_to '[x]',
+            <%= link_to 'Edit', edit_post_path(post), class: 'command btn btn-primary' %>
+            <%= link_to 'x',
               post_path(post),
               method: :delete,
-              class: 'command',
+              class: 'command btn btn-primary',
               data: { confirm: 'Sure?' } %>
           </li>
         <% end %>

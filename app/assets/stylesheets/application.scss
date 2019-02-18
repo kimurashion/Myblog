@@ -41,7 +41,8 @@ h2 {
 
 .mypagetitle{
   float:left;
-//  font-size: 20px;
+  padding: 4px;
+  font-size: 20px;
 }
 
 
@@ -59,7 +60,7 @@ ul > li {
  //text-align: center;
  font-family: monospace;
  font-size: 16px;
- padding-bottom: 10px;
+ padding: 8px;
  width: 200px;
 //margin-bottom: 15px;
 clear: both;
@@ -119,9 +120,10 @@ h3 {
 }
 
 .left{
-  width: 300px;
+  width: 400px;
 //  height: 300px;
   float:left;
+  background-color: black;
 }
 
 .right {
@@ -132,18 +134,25 @@ h3 {
 }
 
 .left_header{
+  background-color: white;
+  padding: 15px;
+  height: 65px;
+//  border-radius: 20% 20% 0% 0%;
 }
 
-.left_column{
-//  width: 200px;
-}
 
 .addnew_btn{
+  float:right;
 }
 
 .btn-primary{
  font-size: 13px;
  margin-left: 10px;
+}
+
+.left_column{
+  clear:  both; 
+//  width: 200px;
 }
 
 
