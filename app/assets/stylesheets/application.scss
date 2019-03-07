@@ -16,13 +16,13 @@
 @import "bootstrap";
 
 .container {
- width: 150px;
+// width: 150px;
 // margin: 20px auto;
  background-color: silver;
 // background-image: url(/assets/IMG_1236.jpg);
- background-repeat: no-repeat;
- background-size: cover;
- height: 800px;
+// background-repeat: no-repeat;
+// background-size: cover;
+// height: 800px;
 }
 
 body {
@@ -164,5 +164,8 @@ h3 {
   text-align: right;
 }
 
+
+
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+
