@@ -26,8 +26,8 @@
 }
 
 body {
- font-family: Verdana, sans-serif;
- font-size: 14px;
+// font-family: Verdana, sans-serif;
+// font-size: 14px;
 }
 
 h2 {
@@ -41,8 +41,8 @@ h2 {
 
 .mypagetitle{
   float:left;
-  padding: 4px;
-  font-size: 20px;
+//  padding: 4px;
+//  font-size: 20px;
 }
 
 
@@ -57,28 +57,28 @@ h2 {
 
 
 ul > li {
- //text-align: center;
- font-family: monospace;
- font-size: 16px;
- padding: 8px;
- width: 200px;
+//text-align: center;
+// font-family: monospace;
+// font-size: 16px;
+// padding: 8px;
+//width: 200px;
 //margin-bottom: 15px;
-clear: both;
+//clear: both;
 }
 
 .list-unstyled {
 // color: #D7EEFF;
 //text-align: center;
- font-family: monospace;
- font-size: 16px;
- padding-bottom: 10px;
- width: 200px;
+// font-family: monospace;
+// font-size: 16px;
+// padding-bottom: 10px;
+// width: 200px;
 // margin-bottom: 15px;
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+//  width: 50px;
+//  height: 50px;
 }
 
 .header-menu {
@@ -127,8 +127,8 @@ h3 {
 }
 
 .right {
-  overflow: hidden;
-  width: auto;
+//  overflow: hidden;
+//  width: auto;
 //  clear:left;
 //  height: 300px;
 }
@@ -136,8 +136,7 @@ h3 {
 .left_header{
   background-color: white;
   padding: 15px;
-  height: 65px;
-//  border-radius: 20% 20% 0% 0%;
+  height: 50px;
 }
 
 
@@ -151,7 +150,7 @@ h3 {
 }
 
 .left_column{
-  clear:  both; 
+//  clear:  both; 
 //  width: 200px;
 }
 
@@ -161,11 +160,5 @@ h3 {
 }
 
 .global_header{
-  text-align: right;
+//  text-align: right;
 }
-
-
-
-// Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "bootstrap";
-
