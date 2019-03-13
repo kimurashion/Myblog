@@ -2,48 +2,40 @@
 <html lang="en">
 
 <div class="main-container">
+  
   <div class="left">
-
     <div class="left_header">
-      
-        <div class="mypagetitle">
-          自分の投稿
-        </div>
+      <ul class="list-unstyled">
+        <li><div class="mypagetitle">自分の投稿</div></li>
+        <div class="new_btn">
         <%= link_to '新規投稿', new_post_path, class: 'addnew_btn btn btn-primary' %>
+        </div>
+      </ul>
     </div>
-
     <div class="left_column">
       <ul class="list-unstyled">
         <% @posts.each do |post| %>
-          <li>
-            <%= link_to post.title, post_path(post) %>
-            <%= link_to 'Edit', edit_post_path(post), class: 'command btn btn-primary' %>
-            <%= link_to 'x',
+          <li><%= link_to post.title, post_path(post) %></li>
+          <%= link_to 'Edit', edit_post_path(post), class: 'command btn btn-primary' %>
+          <%= link_to 'x',
               post_path(post),
               method: :delete,
               class: 'command btn btn-primary',
               data: { confirm: 'Sure?' } %>
-          </li>
-        <% end %>
+          <% end %>
       </ul>
     </div>
   </div>
 
   <div class="right">
     <div class="right_header">
-      <h2>
-        <div class="otherpagetitle">
-        他の人の投稿
-        </div>
-      </h2>
+      <ul class="list-unstyled">
+      <li><div class="otherpagetitle">他の人の投稿</div></li>
     </div>
-
     <div class="right_column">
       <ul class="list-unstyled">
         <% @otherposts.each do |post| %>
-          <li>
-            <%= link_to post.title, post_path(post) %>
-          </li>
+          <li><%= link_to post.title, post_path(post) %></li>
         <% end %>
       </ul>
     </div>

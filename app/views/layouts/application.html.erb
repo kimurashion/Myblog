@@ -15,58 +15,28 @@
               <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                  <a class="navbar-brand" href="https://68d12d3a096340e9bc0dc10eaa227bfc.vfs.cloud9.us-east-2.amazonaws.com/">Myblog</a>
+                  <a class="navbar-brand" href="https://df0d9c6484274edf9e72c52ced1bebf7.vfs.cloud9.us-east-2.amazonaws.com/">Myblog</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
-                    <li>
                       <% if user_signed_in? %>
-                          <%= current_user.username %>
-                          <%= link_to 'プロフィール変更', edit_user_registration_path %>
-                          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-                          <%= link_to 'ユーザーネームの設定', mypage_edit_path %>
+                          <li><%= link_to 'ユーザー設定', edit_user_registration_path %></li>
+                          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+                          <li><%= link_to 'ニックネーム設定', mypage_edit_path %></li>
                       <% else %>
-                          <%= link_to 'サインアップ', new_user_registration_path %>
-                          <%= link_to 'ログイン', new_user_session_path %>
+                          <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+                          <li><%= link_to 'ログイン', new_user_session_path %></li>
+                              <p class="notice"><%= notice %></p>
+                              <p class="alert"><%= alert %></p>
                       <% end %>
-                    </li>
                   </ul>
-
-                  
-                  
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
             </nav>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <div class="global_header">
-                <% if user_signed_in? %>
-                    <%= current_user.username %>
-                    <%= link_to 'プロフィール変更', edit_user_registration_path %>
-                    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-                    <%= link_to 'ユーザーネームの設定', mypage_edit_path %>
-                <% else %>
-                    <%= link_to 'サインアップ', new_user_registration_path %>
-                    <%= link_to 'ログイン', new_user_session_path %>
-                <% end %>
-            </div>
-            <p class="notice"><%= notice %></p>
-            <p class="alert"><%= alert %></p>
+  
             <%= yield %>
         </div>
-        <%= link_to image_tag('logo.jpg', class: 'logo rounded'), root_path %>
     </header>
   </body>
 </html>
