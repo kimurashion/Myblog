@@ -2,20 +2,20 @@
 <html lang="en">
 
 <div class="main-container">
-  
-  <div class="left">
-    <div class="left_header">
-      <ul class="list-unstyled">
-        <li><div class="mypagetitle">自分の投稿</div></li>
-        <div class="new_btn">
-        <%= link_to '新規投稿', new_post_path, class: 'addnew_btn btn btn-primary' %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>自分の投稿</h4>
         </div>
-      </ul>
-    </div>
-    <div class="left_column">
-      <ul class="list-unstyled">
+        <div class="col-md-6">
+          <%= link_to '新規投稿', new_post_path, class: 'addnew_btn btn btn-primary' %>
+        </div>
+      </div>
+      <div class="row"> 
+    <div class="col-md-12">
         <% @posts.each do |post| %>
-          <li><%= link_to post.title, post_path(post) %></li>
+          <%= link_to post.title, post_path(post) %>
           <%= link_to 'Edit', edit_post_path(post), class: 'command btn btn-primary' %>
           <%= link_to 'x',
               post_path(post),
@@ -23,21 +23,21 @@
               class: 'command btn btn-primary',
               data: { confirm: 'Sure?' } %>
           <% end %>
-      </ul>
+    </div>
+    <div class="col-md-12">
+      test
+    </div>
+    <div class="col-md-12">
+      test
+    </div>
+
+      </div>
+    </div>
+    <div class="col-md-6">
+      他の人の投稿
     </div>
   </div>
 
-  <div class="right">
-    <div class="right_header">
-      <ul class="list-unstyled">
-      <li><div class="otherpagetitle">他の人の投稿</div></li>
-    </div>
-    <div class="right_column">
-      <ul class="list-unstyled">
-        <% @otherposts.each do |post| %>
-          <li><%= link_to post.title, post_path(post) %></li>
-        <% end %>
-      </ul>
-    </div>
-  </div>
+</div>
+
 </div>
